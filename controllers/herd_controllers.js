@@ -96,9 +96,7 @@ module.exports = function(app) {
     }); 
     
     app.get("/dashboard", function(req, res){
-        console.log("==========================================================================================")
-        console.log("dashboard")
-        console.log(req.user)
+  
         if(req.user){
             db.User.findOne({
                 where: {id: req.user.id},
